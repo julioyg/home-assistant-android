@@ -44,6 +44,11 @@
             android:icon="@drawable/ic_fullscreen"
             android:title="@string/fullscreen"
             android:summary="@string/fullscreen_def"/>
+        <SwitchPreference
+            android:key="biometric"
+            android:icon="@drawable/ic_baseline_fingerprint_24"
+            android:title="@string/biometric"
+            android:summary="@string/biometric_def"/>
     </PreferenceCategory>
     <PreferenceCategory
         android:title="@string/app_version_info">
