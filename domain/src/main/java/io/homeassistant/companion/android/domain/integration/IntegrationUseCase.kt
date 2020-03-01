@@ -33,6 +33,9 @@ interface IntegrationUseCase {
     suspend fun setFullScreenEnabled(enabled: Boolean)
     suspend fun isFullScreenEnabled(): Boolean
 
+    suspend fun setBiometricEnabled(enabled: Boolean)
+    suspend fun isBiometricEnabled(): Boolean
+
     suspend fun getServices(): Array<Service>
 
     suspend fun getEntities(): Array<Entity<Any>>

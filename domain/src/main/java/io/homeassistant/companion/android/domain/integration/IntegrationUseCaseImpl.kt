@@ -76,6 +76,14 @@ class IntegrationUseCaseImpl @Inject constructor(
         return integrationRepository.isFullScreenEnabled()
     }
 
+    override suspend fun setBiometricEnabled(enabled: Boolean){
+        return integrationRepository.setBiometricEnabled(enabled)
+    }
+
+    override  suspend fun isBiometricEnabled(): Boolean{
+        return integrationRepository.isBiometricEnabled()
+    }
+
     override suspend fun getServices(): Array<Service> {
         return integrationRepository.getServices()
     }
