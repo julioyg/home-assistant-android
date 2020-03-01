@@ -1,9 +1,23 @@
 package io.homeassistant.companion.android.data.integration
 
 import io.homeassistant.companion.android.data.LocalStorage
-import io.homeassistant.companion.android.data.integration.entities.*
+import io.homeassistant.companion.android.data.integration.entities.EntityResponse
+import io.homeassistant.companion.android.data.integration.entities.FireEventRequest
+import io.homeassistant.companion.android.data.integration.entities.GetConfigResponse
+import io.homeassistant.companion.android.data.integration.entities.IntegrationRequest
+import io.homeassistant.companion.android.data.integration.entities.RegisterDeviceRequest
+import io.homeassistant.companion.android.data.integration.entities.SensorRequest
+import io.homeassistant.companion.android.data.integration.entities.ServiceCallRequest
+import io.homeassistant.companion.android.data.integration.entities.UpdateLocationRequest
 import io.homeassistant.companion.android.domain.authentication.AuthenticationRepository
-import io.homeassistant.companion.android.domain.integration.*
+import io.homeassistant.companion.android.domain.integration.DeviceRegistration
+import io.homeassistant.companion.android.domain.integration.Entity
+import io.homeassistant.companion.android.domain.integration.IntegrationRepository
+import io.homeassistant.companion.android.domain.integration.Sensor
+import io.homeassistant.companion.android.domain.integration.SensorRegistration
+import io.homeassistant.companion.android.domain.integration.Service
+import io.homeassistant.companion.android.domain.integration.UpdateLocation
+import io.homeassistant.companion.android.domain.integration.ZoneAttributes
 import io.homeassistant.companion.android.domain.url.UrlRepository
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import javax.inject.Inject
